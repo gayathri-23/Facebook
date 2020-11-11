@@ -1,0 +1,35 @@
+
+    import React, { useState } from 'react';
+    import index from './index.css';
+    
+    
+    const Mupdates = () => {
+        const[s,setState]=React.useState([
+         {id:1, img:"../img/allu.jpg", name:"alluarjun group"},
+         {id:2, img:"../img/mahesh.jpg", name:"mahesh babu group"},
+         {id:3, img:"../img/ram.jpg", name:"ram charan group"},
+         {id:5, img:"../img/Sri.jpg", name:"Sridevi group"},
+            ]);
+    
+        
+            return(
+                <div className="updates">
+                    {s.map((up)=>(
+                        <div className="updatesc" key={up.id}>
+                            <div className="updatesb">
+                                <img src={up.img} />
+                                <div className="updatesbo">
+                                <div className="updatesboimg">
+                                <img src={up.img} />
+                            </div>
+                            <div className="updatesboname">{up.name}</div>
+                            </div>
+                            </div>
+                          </div> 
+                    )
+                    )}
+               
+                </div>
+            )
+        }
+    export default Mupdates;
